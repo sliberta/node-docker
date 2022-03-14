@@ -1,0 +1,17 @@
+version:  "3"
+services:
+  node-app:
+    volumes:
+      # - ./:/app:ro # This read only option 'ro' is not working for some reason
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - MONGO_USER=root
+      - MONGO_PASSWORD=password
+      - SESSION_SECRET=secret
+    command: npm run dev
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password

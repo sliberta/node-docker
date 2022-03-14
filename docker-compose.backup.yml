@@ -1,0 +1,14 @@
+version:  "3"
+services:
+  node-app:
+    build: .
+    ports:
+      - "3000:7000"
+    volumes:
+      # - ./:/app:ro # This read only option 'ro' is not working for some reason
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - PORT=7000
+    # env_file:
+    #   - ./.env
