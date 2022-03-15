@@ -41,6 +41,11 @@ jobs:
         with:
           path: "node-docker"
 
+      - name: Show path and contents
+        run: |
+          pwd
+          ls -la
+
       - name: Build docker
         run: |
           echo ---- Stopping docker services ------------
