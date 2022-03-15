@@ -44,7 +44,7 @@ jobs:
       - name: Show path and contents
         run: |
           pwd
-          ls -la node-docker
+          ls -la node-docker/nginx
 
       - name: Build docker
         run: |

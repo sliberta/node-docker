@@ -4,7 +4,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /__w/node-docker/node-docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - /__w/node-docker/node-docker/node-docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
   node-app:
     environment:
       - NODE_ENV=production
