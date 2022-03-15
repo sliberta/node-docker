@@ -3,11 +3,11 @@
 name: myNodeAppCI
 
 env:
-  MONGO_USER: ${{env.MONGO_USER}}
-  MONGO_PASSWORD: ${{env.MONGO_PASSWORD}}
-  SESSION_SECRET: ${{env.SESSION_SECRET}}
-  MONGO_INITDB_ROOT_USERNAME: ${{env.MONGO_INITDB_ROOT_USERNAME}}
-  MONGO_INITDB_ROOT_PASSWORD: ${{env.MONGO_INITDB_ROOT_PASSWORD}}
+  MONGO_USER: ${{myNodeDockerEnvironment.MONGO_USER}}
+  MONGO_PASSWORD: ${{myNodeDockerEnvironment.MONGO_PASSWORD}}
+  SESSION_SECRET: ${{myNodeDockerEnvironment.SESSION_SECRET}}
+  MONGO_INITDB_ROOT_USERNAME: ${{myNodeDockerEnvironment.MONGO_INITDB_ROOT_USERNAME}}
+  MONGO_INITDB_ROOT_PASSWORD: ${{myNodeDockerEnvironment.MONGO_INITDB_ROOT_PASSWORD}}
 
 # Controls when the workflow will run
 on:
