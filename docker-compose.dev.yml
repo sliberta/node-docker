@@ -1,5 +1,8 @@
 version:  "3"
 services:
+  nginx:
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
   node-app:
     volumes:
       # - ./:/app:ro # This read only option 'ro' is not working for some reason
