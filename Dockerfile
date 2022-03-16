@@ -10,3 +10,6 @@ COPY    . ./
 ENV     PORT 7000
 EXPOSE ${PORT}
 CMD    ["node", "index.js"]
+
+FROM nginx:stable-alpine
+COPY ./nginx/default.conf /et/nginx/conf.d/default.conf
